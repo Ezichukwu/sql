@@ -210,4 +210,14 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 ```
 Your thoughts...
+
+Most people fill out forms every day without thinking about who they were designed for. They look simple, but even basic fields like name and address carry assumptions about who people are and how they live.
+
+Take names. A lot of forms expect a first name and a last name, in that order, using only plain English letters. That works fine for some people, but not for everyone. Someone named O’Connor or Jean-Luc might get an error because the form won’t accept apostrophes or hyphens. Accents often get stripped out, so a name like José or Nguyễn ends up spelled wrong. People with only one name, which is common in some cultures, have to make up a last name or type something like “N/A.” In many cultures, the family name comes first, so the form gets it backwards. These seem like small problems, but when your name doesn’t match across your ID, bank account, and plane ticket, it can cause some trouble.
+
+Addresses work the same way. Most systems assume you have one permanent home with a street number and postal code. People who are homeless, staying in shelters, or moving between places often can’t provide that, which makes it harder to open a bank account, get a health card, or apply for a job. Some rural and First Nations communities in Canada don’t have standard street addresses at all, so their mail goes to a post office box or community office instead.
+
+None of this is usually done on purpose. Someone designing a form just pictured a “typical” person and built it around them. But like in this article about NADRA, those small choices decide who the system works for. The people who don’t fit are the ones who end up stuck explaining themselves at the counter.
+
 ```
+
