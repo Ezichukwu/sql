@@ -58,6 +58,13 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
+Architecture 1: 
+in the slowly changing dimension type 1 design, changes to the customer's address will overwrite the existing information. The "CUSTOMER_ADDRESS" table contains customer_id, street_address, city, Province, and postal_code. This will allow each customer to have only one address on record. When a customer moves, an update statement will replace the previous address with a new one. THe previous address is not retained.
+
+Architecture 2:
+in the slowly changing dimension type 2 design, changes to a customer's address are retained by inserting a new record insteadof overwriting the existing one. The "CUSTOMER_ADDRESS" table contains address_id, customer_id, street_address, city, province, postal_code, start_date, end_date and is_current_date. Each time a customer changes address, a new record is inserted. The previous record is retained, its end_date is updated, and its is_current_date value is changed to 0. The new record receives the new address, a start_date, a NULL end_date, and an is_current_date value of 1.
+
+the main difference between both is the history of address changes.
 ```
 
 ***
@@ -194,4 +201,10 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 ```
 Your thoughts...
+
+
+Bias in training data is a big issue. Humans collect and label the data, so it’s hard to expect the results to be neutral. Our backgrounds and beliefs shape how we see things, and that shows up in the labels and categories we choose. Those choices can then shape how AI systems sort people. And because the answer comes from a computer, people may accept it as objective without question.
+Then there’s the question of who’s responsible when things go wrong. I don’t think it makes sense to blame an algorithm. How do you hold something accountable if it can’t understand what it did? The responsibility belongs to the people and organisations that build and use these tools. Researchers should be upfront about bias and the limits of their data. Companies should understand those limits before releasing a product. Institutions should ask for this information before relying on the results.
+Responsibility can also be shared. If a company sells a facial recognition system it knows works poorly for certain groups, it should still carry some of the blame, even if it disclosed the problem. But if an institution knows about the problem and uses the system anyway, more of the responsibility falls on that institution.
+Finally, fixing bias might mean rethinking how we classify people in the first place. Removing offensive labels isn’t enough if the system behind them is flawed. I also don’t think researchers can fully set aside their own biases. That’s why the communities being represented should get a say in how they’re classified. Researchers shouldn’t be the only ones deciding how other people are represented.
 ```
